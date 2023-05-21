@@ -1,5 +1,4 @@
 import Icon, { AvailableIcons } from "$store/components/ui/Icon.tsx";
-import Newsletter from "$store/islands/Newsletter.tsx";
 
 import IconHome from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/home.tsx";
 import IconBook from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/book.tsx";
@@ -59,10 +58,10 @@ function FooterContainer(
 
 function Footer() {
   return (
-    <footer class="w-full bg-white">
+    <footer style={{ height: "96px" }} class="">
       <div>
-        <div class="container w-full">
-          <FooterContainer class="flex justify-center w-full ">
+        <div class="container">
+          <FooterContainer class="flex justify-center w-full max-h-24 md:max-h-10 fixed bottom-0 left-0 z-50 bg-white">
             <ul class="flex w-full md:w-[768px] ml-10 mr-10 items-center justify-between text-sm font-sm">
               <li>
                 <a
