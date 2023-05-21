@@ -117,7 +117,7 @@ export default function BannnerGrid({
               RADIUS_MOBILE[borderRadius.mobile ?? "none"]
             } ${RADIUS_DESKTOP[borderRadius.desktop ?? "none"]} `}
           >
-            <div class="card card-compact bg-white">
+            <div class="card card-compact bg-white hover:text-primary">
               <Picture>
                 <Source
                   media="(max-width: 767px)"
@@ -144,7 +144,7 @@ export default function BannnerGrid({
                 <h2 class="card-title">{title}</h2>
                 <p>{description}</p>
                 <div class="card-actions justify-end">
-                  <button class="btn bg-primary">{buttonText}</button>
+                  <button class="btn bg-primary text-white">{buttonText}</button>
                 </div>
               </div>
             </div>
