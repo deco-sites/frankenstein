@@ -2,6 +2,8 @@ import { Picture, Source } from "deco-sites/std/components/Picture.tsx";
 import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
 
 export interface Banner {
+  title: string;
+  description: string;
   srcMobile: LiveImage;
   srcDesktop?: LiveImage;
   /**
@@ -12,6 +14,7 @@ export interface Banner {
    * @description When you click you go to
    */
   href: string;
+  buttonText: string;
 }
 
 export type BorderRadius =
@@ -105,35 +108,46 @@ export default function BannnerGrid({
           MOBILE_COLUMNS[itemsPerLine.mobile ?? 2]
         } ${DESKTOP_COLUMNS[itemsPerLine.desktop ?? 4]}`}
       >
-        {banners.map(({ href, srcMobile, srcDesktop, alt }) => (
+        {banners.map((
+          { title, description, href, srcMobile, srcDesktop, alt, buttonText },
+        ) => (
           <a
             href={href}
             class={`overflow-hidden ${
               RADIUS_MOBILE[borderRadius.mobile ?? "none"]
             } ${RADIUS_DESKTOP[borderRadius.desktop ?? "none"]} `}
           >
-            <Picture>
-              <Source
-                media="(max-width: 767px)"
-                src={srcMobile}
-                width={100}
-                height={100}
-              />
-              <Source
-                media="(min-width: 768px)"
-                src={srcDesktop ? srcDesktop : srcMobile}
-                width={250}
-                height={250}
-              />
-              <img
-                class="w-full"
-                sizes="(max-width: 640px) 100vw, 30vw"
-                src={srcMobile}
-                alt={alt}
-                decoding="async"
-                loading="lazy"
-              />
-            </Picture>
+            <div class="card card-compact bg-base-100 shadow-xl">
+              <Picture>
+                <Source
+                  media="(max-width: 767px)"
+                  src={srcMobile}
+                  width={100}
+                  height={100}
+                />
+                <Source
+                  media="(min-width: 768px)"
+                  src={srcDesktop ? srcDesktop : srcMobile}
+                  width={200}
+                  height={200}
+                />
+                <img
+                  class="w-full"
+                  sizes="(max-width: 640px) 100vw, 30vw"
+                  src={srcMobile}
+                  alt={alt}
+                  decoding="async"
+                  loading="lazy"
+                />
+              </Picture>
+              <div class="card-body">
+                <h2 class="card-title">{title}</h2>
+                <p>{description}</p>
+                <div class="card-actions justify-end">
+                  <button class="btn bg-primary">{buttonText}</button>
+                </div>
+              </div>
+            </div>
           </a>
         ))}
       </div>
