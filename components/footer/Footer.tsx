@@ -59,7 +59,7 @@ function FooterContainer(
 
 function Footer() {
   return (
-    <footer class="w-full bg-slate-200">
+    <footer class="w-full bg-white">
       <div>
         <div class="container w-full">
           <FooterContainer class="flex justify-center w-full ">
@@ -71,7 +71,7 @@ function Footer() {
                   rel="noopener noreferrer"
                   aria-label="Home logo"
                 >
-                  <div class="flex flex-col items-center hover:text-purple-900 fill-current text-slate-400">
+                  <div class="flex flex-col items-center hover:text-secondary fill-current text-neutral">
                     <IconHome class="w-9 h-9" />
                     <span>Home</span>
                   </div>
@@ -84,7 +84,7 @@ function Footer() {
                   rel="noopener noreferrer"
                   aria-label="Catalog logo"
                 >
-                  <div class="flex flex-col items-center hover:text-purple-900 fill-current text-slate-400">
+                  <div class="flex flex-col items-center hover:text-secondary fill-current text-neutral">
                     <IconBook class="w-9 h-9" />
                     <span>Catalog</span>
                   </div>
@@ -97,7 +97,7 @@ function Footer() {
                   rel="noopener noreferrer"
                   aria-label="Chat logo"
                 >
-                  <div class="flex flex-col items-center hover:text-purple-900 fill-current text-slate-400">
+                  <div class="flex flex-col items-center hover:text-secondary fill-current text-neutral">
                     <IconBrandHipchat class="w-9 h-9" />
                     <span>Chat</span>
                   </div>
@@ -110,7 +110,7 @@ function Footer() {
                   rel="noopener noreferrer"
                   aria-label="Cart logo"
                 >
-                  <div class="flex flex-col items-center hover:text-purple-900 fill-current text-slate-400">
+                  <div class="flex flex-col items-center hover:text-secondary fill-current text-neutral">
                     <IconShoppingCart class="w-9 h-9" />
                     <span>Cart</span>
                   </div>

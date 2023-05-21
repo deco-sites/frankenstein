@@ -113,11 +113,11 @@ export default function BannnerGrid({
         ) => (
           <a
             href={href}
-            class={`overflow-hidden ${
+            class={`overflow-hidden shadow-xl ${
               RADIUS_MOBILE[borderRadius.mobile ?? "none"]
             } ${RADIUS_DESKTOP[borderRadius.desktop ?? "none"]} `}
           >
-            <div class="card card-compact bg-base-100 shadow-xl">
+            <div class="card card-compact bg-white">
               <Picture>
                 <Source
                   media="(max-width: 767px)"
